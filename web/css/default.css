@@ -1,0 +1,398 @@
+/* 
+    Document   : default
+    Created on : 22/12/2012, 13:20:36
+    Author     : Tiago Donizetti Gomes
+    Description:
+        Purpose of the stylesheet follows.
+*/
+body{
+    font-family: 'lucida grande',tahoma,arial,sans-serif;;
+    font-size: 0.8em; 
+    margin: 0 auto;
+    z-index: -1
+}
+a, h1 a:hover{
+    text-decoration: none;
+}
+a{
+    color: blue;
+}
+html, body {
+    height: 100%;
+}
+
+#tudo {
+    min-height: 100%;
+    position: relative;
+}
+
+* html #tudo {
+    height: 100%; /* hack para IE6 que trata height como min-height */
+}
+
+footer{
+    text-align: center;
+    background-color: #eeeeee;
+    padding: 10px 0 10px 0;
+    bottom: 0;
+    display: block;
+    position: absolute;
+    width: 100%
+
+}
+a:hover{
+    text-decoration: underline;
+}
+#main h2{
+    text-align: center;
+}
+#main, .menuOpcoes ul{
+    margin: 0 auto;
+    width: 1024px;
+}
+header  a{
+    color: #ccccff;
+}
+header h1 a{
+    color: white;
+}
+header h1{
+    margin: 0 auto;
+}
+header, header .logo{    
+    height: 80px;   
+}
+header .descricao{
+    padding: 15px 0 0 15px;;
+    float: left;
+
+}
+
+
+.notifyCount, 
+.valorEmConta,
+.numeroDaConta{
+    background-color: green;
+    border-radius: 15%;
+    color: yellow;
+    font-size: 0.9em;
+    font-weight: bold;
+    padding: 0 2px 0 2px;
+}
+.numeroDaConta{
+    background-color: blue;
+}
+
+.notifyCount:empty{
+    padding: 0;
+}
+#bemVindoUsuario{
+    margin: 18px 15px 0 0;
+}
+#bemVindoUsuario, .menuNotify{
+    float: right;
+
+}
+#msgNotify{    
+    background-image: url(../img/carta.png);
+}
+
+.menuNotify{
+    background-repeat: no-repeat;
+    background-position: right;
+    height: 35px;
+    width: 45px;
+    margin: 10px 15px 0 0;    
+    text-align: right;
+    cursor: pointer
+}
+#moneyNotify{    
+    background-image: url(../img/cifrao.png);
+    width: 55px;
+}
+header .logo{
+    background-image: url(../img/pig-money.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 120px;
+    float: left;
+}
+header{ 
+    background-color: #726bcc;
+    color:white;
+    border: 1px solid silver
+}
+#main{
+    min-height: 500px;
+    background-color: white;
+}
+
+.menuOpcoes{
+    height: 30px;
+    background-color: #9e9ae0;    
+    padding-top: 6px;
+    border: 1px dotted silver;
+}
+.menuOpcoes ul{
+    margin: 0 auto;
+
+}
+.menuOpcoes li, .menuOpcoes li a{
+    list-style-type: none;
+    float: left;
+    margin-right: 30px;
+    color:white;
+    font-weight: bold;
+    font-size: 1.2em;
+
+}
+.menuOpcoes li a{
+    text-decoration: none;
+}
+.menuOpcoes li a:hover{
+    text-decoration: underline ;
+}
+#conteudo{
+    min-height: 300px;
+}
+
+.notas{
+    position: relative;
+    z-index: 1;
+}
+.n1{
+    background-image: url('/piggy/img/notas/1-mini.jpg');
+    width: 20px;
+    height: 20px;
+}.n2{
+    background-image: url('/piggy/img/notas/2-mini.jpg');
+}.n5{
+    background-image: url('/piggy/img/notas/5-mini.jpg');
+}.n10{
+    background-image: url('/piggy/img/notas/10-mini.jpg');
+}.n20{
+    background-image: url('/piggy/img/notas/20-mini.jpg');
+}.n50{
+    background-image: url('/piggy/img/notas/50-mini.jpg');
+}.n100{
+    background-image: url('/piggy/img/notas/100-mini.jpg');
+}
+.moeda{
+    background-color: silver;
+    text-align: center;
+    border: 0px solid #ffe35e;
+    border-radius: 100%
+}
+
+.moeda[draggable="true"]{
+    cursor: move;
+}
+.notaDinheiro[draggable="false"]:hover,
+.moeda[draggable="false"]:hover{
+    border: 1px solid #000000;
+}
+.notasAgrupadas .notaDinheiro:hover{
+    margin-left:10px;
+    margin-top:-5px;
+}
+.moeda,.notaDinheiro{
+
+    color: white;  
+    display: inline-block;
+    z-index: 1;
+    background-size: cover;
+
+
+}
+.notasAgrupadas .notaDinheiro{
+    position: absolute;
+}
+.notaDinheiro{
+    background-color: green;
+    width: 80px;
+    text-align: right;
+    border: 1px solid green;
+    margin-bottom: 3px;
+    padding: 2px 12px 2px 4px;
+    font-size: 2px;
+    height: 40px;
+
+}
+
+
+.dinheiroDesabilitado{
+    background-color: #eeeeee;
+}
+
+
+.valorEmConta:before, 
+.dinheiroValor:before, 
+.moeda:before,
+table .dinheiro:before {
+    content: "$ ";
+}
+
+.contaMini{
+    height: 100px;
+    width: 120px;
+    background-image: url(../img/piggy-bank.jpg);
+    background-size: cover;
+    position: relative;
+    z-index: 0;
+    background-position: center;
+
+    text-align: left;
+
+}
+.contaMini input[type="submit"]{
+    /*position: absolute;*/
+    float:right;
+    font-size: 0.8em;
+    background-color: green;
+    border: 1px solid white;
+    color: yellow;
+    cursor: pointer;
+    position: absolute;
+    right: 0;
+    bottom:  0;
+}
+.deposito_contaOrigem{
+    float: left;
+}
+.deposito_contaDestino{
+    float: right
+}
+.caixaEletronico{
+    width: 350px;
+    height: 500px;
+    border-radius: 2%; 
+    text-align: center;   
+    position: relative;
+    background-image: url(../img/caixa.jpg);
+    background-size: cover;
+    margin: 0 auto;
+    position: relative;
+    border: 1px dotted silver
+}
+
+.caixaEletronico .displayConta{
+    padding-top: 25px
+}
+.caixaEletronico .contaMini{
+    width: 100px;
+    height: 82px;
+    margin: 0 auto;
+
+}
+.caixaEletronico .monitor{
+    width: 107px;
+    height: 65px;
+    padding: 10px;
+    font-size: 1.4em;
+    margin-top: 110px;
+    margin-left:65px;
+    font-size: 8pt;
+    font-family: Tahoma;
+    background-color: #dddddd;
+}
+.caixaEletronico .monitor .valorRetirado{
+    height: 13px;
+    width: 15px;
+    border: 1px solid black;
+    display: inline-block
+
+}
+
+
+.caixaEletronico .extrator{
+    margin-top:105px;
+    text-align: left;
+    margin-left: 60px;
+    padding-top: 5px;
+    height:50px;
+
+
+}
+.caixaEletronico .extrator .notaDinheiro {
+
+}
+.formulario {
+    margin: 0 auto;
+    width: 450px
+}
+.formulario label:first-child{
+    width: 140px;
+    display: inline-block;
+}
+.formulario input[type="text"]{
+    width: 150px;    
+}
+.formulario #fCadastro .item{
+    margin: 10px 0 10px 0;    
+}
+.dinheiroEmMaos {
+    border: 1px dashed silver;
+    position: absolute; 
+    bottom: 10px; 
+    padding: 0 10px 60px 30px;
+    width: 120px
+}
+
+.msgErroAlert{
+    background-color: red;
+    color: yellow;
+    text-align: center;
+    font-size: 1.5em;
+}.msgErroInfo{
+    background-color: blue;
+    color: yellow;
+    text-align: center;
+    font-size: 1.5em;
+}
+.view .optView{
+
+    height: 30px;
+    margin:0 auto;
+    padding-top: 10px;
+    text-align: right;
+    vertical-align: middle;
+    margin-bottom: 10px;
+/*    cursor: pointer;
+    background-image: linear-gradient(bottom, #F2F2F2 26%, #DBD8DB 66%, #F2F2F2 86%);
+    background-image: -o-linear-gradient(bottom, #F2F2F2 26%, #DBD8DB 66%, #F2F2F2 86%);
+    background-image: -moz-linear-gradient(bottom, #F2F2F2 26%, #DBD8DB 66%, #F2F2F2 86%);
+    background-image: -webkit-linear-gradient(bottom, #F2F2F2 26%, #DBD8DB 66%, #F2F2F2 86%);
+    background-image: -ms-linear-gradient(bottom, #F2F2F2 26%, #DBD8DB 66%, #F2F2F2 86%);
+
+*/
+}
+
+table.extrato{
+    font-family: "Courier New", courier, serif;
+    border: 1px solid black;
+    border-collapse:  collapse;
+    margin: 12px 
+}
+table.extrato td{
+    border:1px dotted silver;
+    height: 20px
+}
+table .numero, table .dinheiro{
+    text-align: right;
+    
+}
+
+table.extrato .valor{
+    width: 80px;
+}
+table.extrato .dataExecucao{
+    width: 90px;
+    text-align: center
+}
+table.extrato .tipoOperacao{
+    width: 150px;
+}
+table.extrato .numeroConta{
+    width: 80px;
+    text-align: center
+}
